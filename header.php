@@ -12,10 +12,10 @@
                           <a class="nav-link" href="index.html" target="_PARENT">Inicio</a>
                     </li>
                     <li class="nav-item">
-                          <a class="nav-link" href="Login.php" target="_PARENT">Iniciar sesion</a>
+                          <a class="nav-link" href="status.php" target="_PARENT">Estatus de pedidos</a>
                     </li>
                     <li class="nav-item">
-                          <a class="nav-link" href="registro.php" target="_PARENT">Registrarse</a>
+                          <a class="nav-link" href=".php" target="_PARENT">Registrarse</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="agregar_producto.php" target="_PARENT">Vende articulos</a>

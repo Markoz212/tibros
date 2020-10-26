@@ -30,7 +30,7 @@
 
     </head>
     <body class="container-fluid bg-secondary">
-        <iframe id="header" src="header.html" height="20%" width="100%" frameBorder="0" scrolling="no" ></iframe>
+        <iframe id="header" src="header.php" height="20%" width="100%" frameBorder="0" scrolling="no" ></iframe>
 
         <div class="container ">
         <form class="bg-secondary" name="agregar_producto" id="agregar_producto" method="POST" enctype="multipart/form-data">
@@ -79,6 +79,5 @@
               
         </form>
     </div>
-        <iframe id="inferior" src="inferior.html" height="15%" width="100%" frameBorder="0" scrolling="no" ></iframe>
-    </body>
+        </body>
 </html>

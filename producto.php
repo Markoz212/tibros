@@ -16,7 +16,6 @@
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Precio</th>
-                <th>Añadir al carrito</th>
                 <th>Comprar ahora</th>
             </tr>
             
@@ -31,16 +30,16 @@
                 while($row = $result->fetch_assoc()){    
             ?>
                 <tr>
-                    <td><?php echo $row['Nombre']; ?></td>
+                    <td><?php echo $row['Nombre'];?></td>
                     <td><img height="200px" width="200px" src="data:image/jpg;base64,<?php echo base64_encode($row['Imagen']);?>"/> </td>
                     <td><?php echo $row['Isbn']; ?></td>
                     <td><?php echo $row['Descripcion']; ?></td>
                     <td><?php echo $row['Precio']; ?></td>
-                    <td><a target="_PARENT" href="carrito.php"><img img height="50px" width="50px" src="https://img.icons8.com/ios/50/000000/add-shopping-cart.png" alt="Añadir al carrito" /></a></td>
                     <td><a target="_PARENT" href="venta.php"><img img height="50px" width="50px" src="https://img.icons8.com/pastel-glyph/64/000000/pay-by-cash.png" alt="Añadir al carrito" /></a></td>
                 </tr>
         <?php
                 }
+
         ?>
 
         </tbody>
