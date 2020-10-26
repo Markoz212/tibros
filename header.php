@@ -1,3 +1,10 @@
+<?php
+      /*if(isset($_POST["submit"]) && !empty($_POST["submit"])) {
+            require "conexion.php";
+            $busca = $_POST['busca'];
+            $filtro = $_POST['filtro'];
+      }*/
+?>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="estilo.css">
@@ -9,7 +16,7 @@
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                          <a class="nav-link" href="index.html" target="_PARENT">Inicio</a>
+                          <a class="nav-link" href="index.php" target="_PARENT">Inicio</a>
                     </li>
                     <li class="nav-item">
                           <a class="nav-link" href="status.php" target="_PARENT">Estatus de pedidos</a>
@@ -21,12 +28,22 @@
                       <a class="nav-link" href="agregar_producto.php" target="_PARENT">Vende articulos</a>
                 </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0" action="">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+                  <form class="form-inline my-2 my-lg-0" action="producto.php">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="busca">
+                    <select name="filtro" style="margin-right: 5px" required >
+                        <option selected value="0">Buscar por.</option>
+                        <option value="1">ISBN</option>
+                        <option value="2">Nombre de libro</option>
+                        <option value="3">Genero</option>
+                        <option value="4">Autor</option>
+                        <option value="5">Precio</option>
+                        <option value="6">Editorial</option>
+                        <option value="7">Idioma</option>
+                        <option value="8">Año</option>
+                    </select>
+                    <Button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</Button>
                   </form>
             </nav>
         </header> 
-
     </body>
 </html>

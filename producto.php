@@ -4,10 +4,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 <body class="container-fluid bg-secondary">
-
     <table border="2px">
         <thead>
             <tr> 
@@ -18,14 +16,42 @@
                 <th>Precio</th>
                 <th>Comprar ahora</th>
             </tr>
-            
         </thead>
-
         <tbody>
             <?php
                 require "conexion.php";
                 $con = conexion();
-                $query = "SELECT * FROM Libro LIMIT 10";
+                $filtro = $_POST['filtro'];
+                $busca = $_POST['busca'];
+                switch($filtro){
+                    case 0:
+                        $query = "SELECT * FROM Libro LIMIT 10";
+                    break;
+                    case 1:
+                        $query = "SELECT * FROM Libro WHERE Isbn = '$busca'";
+                    break;
+                    case 2:
+                        $query = "SELECT * FROM Libro WHERE Nombre = '$busca'";
+                    break;
+                    case 3:
+                        $query = "SELECT * FROM Libro WHERE Genero = '$busca'";
+                    break;
+                    case 4:
+                        $query = "SELECT * FROM Libro WHERE Autor = '$busca'";
+                    break;
+                    case 5:
+                        $query = "SELECT * FROM Libro WHERE Precio = '$busca'";
+                    break;
+                    case 6:
+                        $query = "SELECT * FROM Libro WHERE Editorial = '$busca'";
+                    break;
+                    case 7:
+                        $query = "SELECT * FROM Libro WHERE Idioma = '$busca'";
+                    break;
+                    case 8:
+                        $query = "SELECT * FROM Libro WHERE Anio  = '$busca'";
+                    break;
+                }
                 $result = $con->query($query);
                 while($row = $result->fetch_assoc()){    
             ?>
@@ -41,10 +67,7 @@
                 }
 
         ?>
-
         </tbody>
-    </table>
-    
-           
+    </table>  
 </body>
 </html>
