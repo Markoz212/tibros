@@ -57,13 +57,13 @@
 
             ?>
                 <tr>
-                    <td><?php echo $row['Nombre']; echo $var=$row['Nombre']; ?></td>
-                    <td><img height="200px" width="200px" src="data:image/jpg;base64,<?php echo base64_encode($row['Imagen']);?>"/> </td>
                     <td><?php echo $row['Isbn']; ?></td>
+                    <td><img height="200px" width="200px" src="data:image/jpg;base64,<?php echo base64_encode($row['Imagen']);?>"/> </td>
+                    <td><?php echo $row['Nombre']; echo $var=$row['Nombre']; ?></td>
                     <td><?php echo $row['Descripcion']; ?></td>
                     <td><?php echo $row['Precio']; ?></td>
                     <div>
-                    <td><a target="_PARENT" href="venta.php?valor=$var"><img img height="50px" width="50px" src="https://img.icons8.com/pastel-glyph/64/000000/pay-by-cash.png" alt="Añadir al carrito" /></a></td>
+                    <td><a target="_PARENT" href="venta.php?valor=<?php echo $row['Isbn']; ?>"><img img height="50px" width="50px" src="https://img.icons8.com/pastel-glyph/64/000000/pay-by-cash.png" alt="Añadir al carrito" /></a></td>
                     </div>
                 </tr>
         <?php
