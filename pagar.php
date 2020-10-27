@@ -14,6 +14,7 @@
                 <th>DHL</th>
                 <th>Estafeta</th>
                 <th>Fedex</th>
+                <th>Correos de Mexico</th>
             </tr>
             <tr>
                 <th><img src="https://comunidadblogger.net/wp-content/uploads/2019/06/DHL.jpg" width="300px"></th>

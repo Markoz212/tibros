@@ -8,7 +8,7 @@
 <body class="container-fluid bg-secondary">
 
 <center>
-<h1>Bienvenido a la libreria</h1>
+<h1> Bienvenido a la libreria </h1>
     <table border="2px">
         <thead>
             <tr> 
