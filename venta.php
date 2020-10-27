@@ -63,7 +63,7 @@
                     </div>
                     <div class="row form-group">
 		    	        <label for="Nombre_libro" class="col-sm-2 col-form-label">Nombre</label>
-		    	        <input type="text" class="form-control" name="Nombre_libro" id="Nombre_libro" disabled value="<?php echo $row['Nombre']; ?>">
+		    	        <input type="text" class="form-control" name="Nombre_libro" id="Nombre_libro" value="<?php echo $row['Nombre']; ?>">
 		  	        </div>
                     <input class="btn btn-dark" type="submit" value="Comprar" name="submit">
                 </form>
