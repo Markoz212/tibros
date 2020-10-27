@@ -27,10 +27,9 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="estilo.css">
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
     </head>
     <body class="container-fluid bg-secondary">
-        <iframe id="header" src="header.html" height="20%" width="100%" frameBorder="0" scrolling="no" ></iframe>
+        <iframe id="header" src="header.php" height="20%" width="100%" frameBorder="0" scrolling="no" ></iframe>
 
         <div class="container ">
         <form class="bg-secondary" name="agregar_producto" id="agregar_producto" method="POST" enctype="multipart/form-data">
