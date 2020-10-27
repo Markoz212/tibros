@@ -5,7 +5,7 @@
         $tarjeta = $_POST['Tarjeta'];
         echo '<script>';
             echo 'if(confirm("Confirmar compra del libro '.$row['Nombre'].'?") )';
-            echo '{ confirm("Compra exitosa! El libro '.$row['Nombre'].' sera enviado al domicilio: '.$direccion.'\nGracias por su compra '.$nombre.'"); }';
+            echo '{ alert("Compra exitosa! El libro '.$row['Nombre'].' sera enviado al domicilio: '.$direccion.'\nGracias por su compra '.$nombre.'");}';
             echo 'else{ alert("Compra cancelada"); }';
         echo '</script>';
     }

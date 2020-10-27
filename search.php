@@ -21,7 +21,37 @@
             <?php
                 require "conexion.php";
                 $con = conexion();
-                $query = "SELECT * FROM Libro LIMIT 10";
+                $filtro = $_POST['filtro'];
+                $busca = $_POST['busca'];
+                switch($filtro){
+                    case 0:
+                        $query = "SELECT * FROM Libro LIMIT 10";
+                    break;
+                    case 1:
+                        $query = "SELECT * FROM Libro WHERE Isbn = '$busca'";
+                    break;
+                    case 2:
+                        $query = "SELECT * FROM Libro WHERE Nombre = '$busca'";
+                    break;
+                    case 3:
+                        $query = "SELECT * FROM Libro WHERE Genero = '$busca'";
+                    break;
+                    case 4:
+                        $query = "SELECT * FROM Libro WHERE Autor = '$busca'";
+                    break;
+                    case 5:
+                        $query = "SELECT * FROM Libro WHERE Precio = '$busca'";
+                    break;
+                    case 6:
+                        $query = "SELECT * FROM Libro WHERE Editorial = '$busca'";
+                    break;
+                    case 7:
+                        $query = "SELECT * FROM Libro WHERE Idioma = '$busca'";
+                    break;
+                    case 8:
+                        $query = "SELECT * FROM Libro WHERE Anio  = '$busca'";
+                    break;
+                }
                 $result = $con->query($query);
                 while($row = $result->fetch_assoc()){
 
@@ -38,6 +68,7 @@
                 </tr>
         <?php
                 }
+
         ?>
         </tbody>
     </table>  

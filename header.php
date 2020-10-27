@@ -1,10 +1,3 @@
-<?php
-      /*if(isset($_POST["submit"]) && !empty($_POST["submit"])) {
-            require "conexion.php";
-            $busca = $_POST['busca'];
-            $filtro = $_POST['filtro'];
-      }*/
-?>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="estilo.css">
@@ -28,9 +21,9 @@
                       <a class="nav-link" href="agregar_producto.php" target="_PARENT">Vende articulos</a>
                 </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0" action="producto.php">
+                  <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
                     <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="busca">
-                    <select name="filtro" style="margin-right: 5px" required >
+                    <select class="form-control" name="filtro" style="margin-right: 5px" required >
                         <option selected value="0">Buscar por.</option>
                         <option value="1">ISBN</option>
                         <option value="2">Nombre de libro</option>
