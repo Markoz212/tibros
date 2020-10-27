@@ -1,3 +1,15 @@
+<?php
+    if(isset($_POST["submit"]) && !empty($_POST["submit"])) {
+        $nombre = $_POST['Nombre'];
+        $direccion = $_POST['Direccion'];
+        $tarjeta = $_POST['Tarjeta'];
+        echo '<script>';
+            echo 'if(confirm("Confirmar compra del libro '.$row['Nombre'].'?") )';
+            echo '{ confirm("Compra exitosa! El libro '.$row['Nombre'].' sera enviado al domicilio: '.$direccion.'\nGracias por su compra '.$nombre.'"); }';
+            echo 'else{ alert("Compra cancelada"); }';
+        echo '</script>';
+    }
+?>
 <html>
 <head>
 	<title>Comprar</title>
@@ -51,9 +63,9 @@
 		  	        </div>
                     <div class="row form-group">
 		    	        <label for="Tarjeta" class="col-sm-2 col-form-label">Tarjeta</label>
-		    	        <input type="text" class="form-control" name="Tarjeta" id="Tarjeta" placeholder="XXXX XXXX XXXX XXXX" patern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} " required>
+		    	        <input type="tel" class="form-control" name="Tarjeta" id="Tarjeta" placeholder="XXXX XXXX XXXX XXXX" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required>
 		  	        </div>
-                    <input class="btn btn-dark" type="submit" value="Comprar">
+                    <input class="btn btn-dark" type="submit" value="Comprar" name="submit">
                 </form>
             </div>
         </div>
