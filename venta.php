@@ -1,15 +1,3 @@
-<?php
-    if(isset($_POST["submit"]) && !empty($_POST["submit"])) {
-        $nombre = $_POST['Nombre'];
-        $direccion = $_POST['Direccion'];
-        $tarjeta = $_POST['Tarjeta'];
-        echo '<script>';
-            echo 'if(confirm("Confirmar compra del libro '.$row['Nombre'].'?") )';
-            echo '{ confirm("Compra exitosa! El libro '.$row['Nombre'].' sera enviado al domicilio: '.$direccion.'\nGracias por su compra '.$nombre.'"); }';
-            echo 'else{ alert("Compra cancelada"); }';
-        echo '</script>';
-    }
-?>
 <html>
 <head>
 	<title>Comprar</title>
@@ -73,6 +61,10 @@
                             <option value="Fedex">Fedex</option>
                         </select>
                     </div>
+                    <div class="row form-group">
+		    	        <label for="Nombre_libro" class="col-sm-2 col-form-label">Nombre</label>
+		    	        <input type="text" class="form-control" name="Nombre_libro" id="Nombre_libro" disabled value="<?php echo $row['Nombre']; ?>">
+		  	        </div>
                     <input class="btn btn-dark" type="submit" value="Comprar" name="submit">
                 </form>
             </div>

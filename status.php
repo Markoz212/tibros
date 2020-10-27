@@ -28,7 +28,6 @@
                 $query = "SELECT * FROM estado";
                 $result = $con->query($query);
                 while($row = $result->fetch_assoc()){
-
             ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>

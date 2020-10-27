@@ -3,7 +3,7 @@
     $direccion= $_POST['Direccion'];
     $tarjeta= $_POST['Tarjeta'];
     $envio= $_POST['Envio'];
-    $libro=$_POST['Nombre'];
+    $libro=$_POST['Nombre_libro'];
     require "conexion.php";
     $con= conexion();
     $query = "INSERT INTO estado (nombre, direccion, envio, libro) VALUES ('$nombre', '$direccion', '$envio', '$libro' )";
@@ -20,7 +20,7 @@
     <center>
     <h2 >
     <?php
-        echo "El pedido sera enviado a $direccion por la paqueteria $envio a nombre de $nombre"
+        echo "El libro $libro sera enviado a $direccion por la paqueteria $envio a nombre de $nombre"
     ?>
     </h2>
     <img src="https://lh3.googleusercontent.com/proxy/N_x4r_bloS1YAFHF_msJA4UczSXZmch5B3p7gfZJ_vhrygCsdqhTe4BfTN_Y5B8mR1e9FAH0BEl7VTK3ZS8OyOqEldpt75RLBw_1L3IvR2KyMQ">
