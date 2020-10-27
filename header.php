@@ -15,13 +15,13 @@
                           <a class="nav-link" href="status.php" target="_PARENT">Estatus de pedidos</a>
                     </li>
                     <li class="nav-item">
-                          <a class="nav-link" href=".php" target="_PARENT">Registrarse</a>
+                          <a class="nav-link" href="pagar.php" target="_PARENT">Pagos</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="agregar_producto.php" target="_PARENT">Vende articulos</a>
                 </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
+                  <form class="form-inline my-2 my-lg-0" action="search.php" method="POST" target="_PARENT">
                     <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="busca">
                     <select class="form-control" name="filtro" style="margin-right: 5px" required >
                         <option selected value="0">Buscar por.</option>

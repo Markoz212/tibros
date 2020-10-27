@@ -6,6 +6,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body class="container-fluid bg-secondary">
+<iframe id="header" src="header.php" height="150px" width="100%" frameBorder="0" scrolling="no" ></iframe>
+    <center>
+    <h2>Resultados de busqueda</h2>
     <table border="2px">
         <thead>
             <tr> 
@@ -71,6 +74,7 @@
 
         ?>
         </tbody>
-    </table>  
+    </table>
+    </center>
 </body>
 </html>

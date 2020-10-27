@@ -6,6 +6,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body class="container-fluid bg-secondary">
+
+<center>
+<h1>Bienvenido a la libreria</h1>
     <table border="2px">
         <thead>
             <tr> 
@@ -27,9 +30,9 @@
 
             ?>
                 <tr>
-                    <td><?php echo $row['Isbn']; ?></td>
+                    <td><?php echo $row['Nombre']; $var=$row['Nombre']; ?></td>
                     <td><img height="200px" width="200px" src="data:image/jpg;base64,<?php echo base64_encode($row['Imagen']);?>"/> </td>
-                    <td><?php echo $row['Nombre']; echo $var=$row['Nombre']; ?></td>
+                    <td><?php echo $row['Isbn']; ?></td>
                     <td><?php echo $row['Descripcion']; ?></td>
                     <td><?php echo $row['Precio']; ?></td>
                     <div>
@@ -40,6 +43,8 @@
                 }
         ?>
         </tbody>
-    </table>  
+    </table>
+    </center>
 </body>
 </html>
+

@@ -5,7 +5,7 @@
         $tarjeta = $_POST['Tarjeta'];
         echo '<script>';
             echo 'if(confirm("Confirmar compra del libro '.$row['Nombre'].'?") )';
-            echo '{ alert("Compra exitosa! El libro '.$row['Nombre'].' sera enviado al domicilio: '.$direccion.'\nGracias por su compra '.$nombre.'");}';
+            echo '{ confirm("Compra exitosa! El libro '.$row['Nombre'].' sera enviado al domicilio: '.$direccion.'\nGracias por su compra '.$nombre.'"); }';
             echo 'else{ alert("Compra cancelada"); }';
         echo '</script>';
     }
@@ -52,7 +52,7 @@
                 </table>  
             </div>
             <div class="col">
-                <form class="bg-secondary" method="POST">
+                <form class="bg-secondary" method="POST" action="envio.php">
                     <div class="row form-group">
 		    	        <label for="Nombre" class="col-sm-2 col-form-label">Nombre</label>
 		    	        <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Nombre" required>
@@ -65,6 +65,14 @@
 		    	        <label for="Tarjeta" class="col-sm-2 col-form-label">Tarjeta</label>
 		    	        <input type="tel" class="form-control" name="Tarjeta" id="Tarjeta" placeholder="XXXX XXXX XXXX XXXX" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required>
 		  	        </div>
+                      <div class="row form-group">
+		    	        <label for="Envio" class="col-sm-2 col-form-label">Enviar por</label>
+		    	        <select name="Envio">
+                            <option value="DHL">DHL</option>
+                            <option value="Stafeta">Stafeta</option>
+                            <option value="Fedex">Fedex</option>
+                        </select>
+                    </div>
                     <input class="btn btn-dark" type="submit" value="Comprar" name="submit">
                 </form>
             </div>
